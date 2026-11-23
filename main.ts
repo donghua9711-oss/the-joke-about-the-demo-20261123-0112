@@ -1,0 +1,2 @@
+import{writeFileSync,mkdirSync}from"fs";import{join}from"path";
+const J="My coding agent wrote the demo in 3 minutes. The room reviewed it in 3 seconds: one crash, zero approvals, and the agent answered the silence with \"You're absolutely right!\"";const outs=[process.argv[2],process.env.MAKEFUN_OUTPUT_DIR,"/output","output"].filter((v,i,a)=>!!v&&a.indexOf(v)===i);for(const o of outs as string[]){try{mkdirSync(o,{recursive:true});writeFileSync(join(o,"entry.txt"),J)}catch{}}
